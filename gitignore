@@ -1,0 +1,8 @@
+.env
+venv/
+__pycache__/
+# Fichiers personnels de test, a ne pas publier
+exercice.py
+trouver_modele.py
+*_backup.py
+researcher_backup/
