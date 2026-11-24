@@ -1,4 +1,4 @@
-# 🔍 Multi-Agent AI Researcher (version améliorée)
+#  Multi-Agent AI Researcher (version améliorée)
 
 Une équipe de **4 agents IA** coordonnée par un chef d'équipe analyse **Hacker News, GitHub, arXiv et le web**, puis rédige un **rapport de tendances sourcé** sur le sujet de votre choix.
 
@@ -7,7 +7,7 @@ Une équipe de **4 agents IA** coordonnée par un chef d'équipe analyse **Hacke
 
 ---
 
-## 🧠 Architecture
+##  Architecture
 
 ```mermaid
 flowchart TD
@@ -30,9 +30,9 @@ flowchart TD
 
 ---
 
-## ✨ Améliorations par rapport au projet original
+##  Améliorations par rapport au projet original
 
-### 🐛 Corrections de bugs
+###  Corrections de bugs
 
 | Problème dans l'original | Correction |
 |---|---|
@@ -48,7 +48,7 @@ flowchart TD
 | `gpt-4o-mini` pour tous | **Routage par rôle** : modèle puissant pour le chef d'équipe, modèle rapide et économique pour les agents, qui font la majorité des appels |
 | Aucune solution de secours | **Fallback automatique** vers d'autres modèles en cas de surcharge (503) ou de limite (429), puis vers Ollama en local en dernier recours |
 
-### 🧰 Outils et agents
+###  Outils et agents
 
 | Original | Version améliorée |
 |---|---|
@@ -58,13 +58,13 @@ flowchart TD
 | 3 agents | **4ᵉ agent « Tech Scout »** : projets GitHub populaires et articles de recherche arXiv récents |
 | Aucun cache | **Cache d'une heure** sur les outils et sur les rapports complets |
 
-### 🧭 Coordination
+###  Coordination
 
 - Recherches **en parallèle** au premier tour au lieu de l'une après l'autre
 - **Interdiction de déléguer deux fois la même tâche**
 - Rapport structuré (titre, tendances avec preuves, projets et articles, sources) dans **la langue de la question**
 
-### 🔒 Sécurité et maîtrise des coûts
+###  Sécurité et maîtrise des coûts
 
 | Risque | Protection |
 |---|---|
@@ -74,7 +74,7 @@ flowchart TD
 | Agent qui boucle et fait exploser la facture | **Nombre maximum d'appels d'outils** : 4 par agent, 8 pour le chef d'équipe |
 | Abus de l'application | Question validée (non vide, 500 caractères maximum) et **5 recherches par 10 minutes** par utilisateur |
 
-### ⚡ Rapidité et expérience utilisateur
+###  Rapidité et expérience utilisateur
 
 | Original | Version améliorée |
 |---|---|
@@ -85,7 +85,7 @@ flowchart TD
 
 ---
 
-## 🧪 Problèmes réels rencontrés et solutions
+##  Problèmes réels rencontrés et solutions
 
 Chaque amélioration répond à un problème observé pendant les tests :
 
@@ -102,7 +102,7 @@ Chaque amélioration répond à un problème observé pendant les tests :
 
 ---
 
-## 🚀 Installation
+##  Installation
 
 ```bash
 python -m venv venv
@@ -120,7 +120,7 @@ streamlit run research_agent.py
 
 ---
 
-## 📁 Structure
+##  Structure
 
 | Fichier | Rôle |
 |---|---|
@@ -134,7 +134,7 @@ streamlit run research_agent.py
 
 ---
 
-## ⚠️ Limites connues
+##  Limites connues
 
 - DuckDuckGo peut bloquer les requêtes automatiques ; Wikipedia prend alors le relais.
 - Les modèles gratuits (Gemini, OpenRouter) ont des limites d'usage et peuvent être saturés aux heures de pointe.
@@ -144,7 +144,7 @@ streamlit run research_agent.py
 
 ---
 
-## 🔭 Pistes d'amélioration
+##  Pistes d'amélioration
 
 - **Lecture des graphiques** : envoyer les images principales d'un article à un modèle multimodal (ex. Gemini), en limitant leur nombre pour maîtriser le coût en tokens.
 - **Évaluation comparative des modèles** : un jeu de questions fixe pour comparer durée, tokens, nombre de sources et qualité selon le modèle.
@@ -153,10 +153,10 @@ streamlit run research_agent.py
 
 ---
 
-## 🛠️ Méthode de travail
+##  Méthode de travail
 
 Analyse du projet original, tests en conditions réelles avec plusieurs fournisseurs, identification des problèmes à partir des journaux d'exécution, puis améliorations ciblées. Développement assisté par IA ; chaque modification a été testée et peut être expliquée.
 
-## 🙏 Crédits
+##  Crédits
 
 Projet original : [awesome-llm-apps](https://github.com/Shubhamsaboo/awesome-llm-apps) par Shubham Saboo. Le README d'origine est disponible dans [`original/README.md`](original/README.md).
